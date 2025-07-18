@@ -1229,7 +1229,7 @@ if (Test-Path $yaraExe -and Test-Path $yaraRules) {
             $cmd = "$yaraExe -p $pid $yaraRules"
             $result = Invoke-Expression $cmd
             if ($result) {
-                "`nMatches in PID $pid:`n$result" | Out-File $memScanLog -Append
+                "`nMatches in PID ${pid}:`n$result" | Out-File $memScanLog -Append
             }
         }
     } catch {
